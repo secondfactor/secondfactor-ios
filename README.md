@@ -25,21 +25,25 @@ PyPI).
 
 ## Install
 
-Pick one.
+The library is not published to CocoaPods or tagged for release. It is one
+short file, so you can also treat it as an example and adapt it. Pick one way
+in.
 
 **Copy the file.** Download
-[`Sources/SecondFactor/SecondFactor.swift`](Sources/SecondFactor/SecondFactor.swift)
+[`Sources/SecondFactor/SecondFactor.swift`](https://raw.githubusercontent.com/secondfactor/secondfactor-ios/main/Sources/SecondFactor/SecondFactor.swift)
 and drag it into your app target in Xcode. Nothing else is needed, and you
-do not write `import SecondFactor`.
+do not write `import SecondFactor`. To update, replace the file.
 
-**Swift Package Manager.** In Xcode, choose File → Add Package Dependencies…
-and enter this repository's URL, or add it to `Package.swift`:
+**Swift Package Manager, from git.** In Xcode, choose **File → Add Package
+Dependencies…**, enter `https://github.com/secondfactor/secondfactor-ios`, and
+set the dependency rule to the `main` branch. In a `Package.swift`:
 
 ```swift
-.package(url: "https://github.com/secondfactor/secondfactor-ios", from: "0.1.0"),
+.package(url: "https://github.com/secondfactor/secondfactor-ios", branch: "main"),
 ```
 
-Then `import SecondFactor` where you use it.
+Then add the `SecondFactor` product to your target and `import SecondFactor`
+where you use it.
 
 ## Set up
 
